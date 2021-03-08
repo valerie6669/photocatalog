@@ -12,25 +12,50 @@ function Image(image, title, tags) {
 		container.css("background", this.color)
 
 		var imageString = "";
-		imageString += "<p>" + this.image + "</p>";
-		imageString += "<cite>" + this.title + "</cite>";
+		imageString += "<img src=>" + this.image + "</img>";
+		//imageString += "<cite>" + this.title + "</cite>";
 
 		container.html(imageString)
-		$(".quotes").prepend(container)
+		$(".Image").prepend(container)
 	}
 }
 
 var images = [
-	new Image("<img src=imgs/catimg1.jpg>", "2020", ["revanchist", "social-media"]),
- 	new Quote('"creativity is dead. let\'s get you some fruit"', " it\'s always sunny", ["meme", "mistakes"], "lightblue"),
- 	new Quote("and yeah so", "ok", ["meme", "sad"], "purple")
+	new Image("<img src=imgs/catimg1.jpg>", "Two bodies one braincell", ["sleepy", "molly", "meemoo", "cuddles"]),
+ 	new Image("<img src=imgs/catimg2.jpg>", "Lost in thought", ["sit", "meemoo"]),
+ 	new Image("<img src=imgs/catimg3.jpg>", "Epitome of Dreaming", ["sleepy", "meemoo"]),
+ 	new Image("<img src=imgs/catimg4.jpg>", "Someone by my side", ["sleepy", "molly", "meemoo", "cuddles"]),
+ 	new Image("<img src=imgs/catimg5.jpg>", "Awareness", ["sit", "meemoo"]),
+ 	new Image("<img src=imgs/catimg6.jpg>", "Before sunrise", ["dark", "trix"]),
+ 	new Image("<img src=imgs/catimg7.jpg>", "Awareness", ["cuddles", "meemoo", "molly", "chillin"]),
+ 	new Image("<img src=imgs/catimg8.jpg>", "The poise", ["chillin", "molly"]),
+ 	new Image("<img src=imgs/catimg9.jpg>", "Awareness", ["sleepy", "meemoo", "molly", "trix", "cuddles"]),
+ 	new Image("<img src=imgs/catimg10.jpg>", "Communal naptime", ["sleepy", "meemoo", "molly", "cuddles"]),
+ 	new Image("<img src=imgs/catimg11.jpg>", "Diva", ["chillin", "molly"]),
+ 	new Image("<img src=imgs/catimg12.jpg>", "Peace and Loves", ["sleepy", "trix"]),
+ 	new Image("<img src=imgs/catimg13.jpg>", "Shy", ["sit", "meemoo"]),
+ 	new Image("<img src=imgs/catimg14.jpg>", "Something in the closet", ["cuddles", "meemoo", "molly"]),
+ 	new Image("<img src=imgs/catimg15.jpg>", "Frazzled, tired", ["sit", "molly"]),
+ 	new Image("<img src=imgs/catimg16.jpg>", "Cleanest lady around", ["sit", "molly"]),
+ 	new Image("<img src=imgs/catimg17.jpg>", "Out cold", ["sleepy", "trix"]),
+ 	new Image("<img src=imgs/catimg18.jpg>", "It\'s been bedtime", ["sleepy", "meemoo", "trix", "dark"]),
+ 	new Image("<img src=imgs/catimg19.jpg>", "Moments before disaster", ["cuddles", "meemoo", "molly", "chillin"]),
+ 	new Image("<img src=imgs/catimg20.jpg>", "A floor? A bed", ["sleepy", "trix"]),
+ 	new Image("<img src=imgs/catimg21.jpg>", "Comfy", ["sleepy", "trix"]),
+ 	new Image("<img src=imgs/catimg22.jpg>", "Distracted nap", ["chillin", "meemoo"]),
+ 	new Image("<img src=imgs/catimg23.jpg>", "Model", ["sit", "molly"]),
+ 	new Image("<img src=imgs/catimg24.jpg>", "Large for the winter", ["sit", "trix"]),
+ 	new Image("<img src=imgs/catimg25.jpg>", "Sweetest Sleep", ["sleepy", "molly"]),
+ 	new Image("<img src=imgs/catimg26.jpg>", "Fruit", ["sit", "meemoo", "molly"]),
+ 	new Image("<img src=imgs/catimg27.jpg>", "Who's that?", ["sit", "meemoo", "dark"]),
+ 	new Image("<img src=imgs/catimg28.jpg>", "Giving me those eyes", ["sit", "meemoo"]),
  ]
 
 //global taglist
  var tagList = []
-quotes.forEach(function(quote){
-	quote.display();
-	quote.tags.forEach(function(tag){
+images.forEach(function(image){
+	image.display();
+	image.tags.forEach(function(tag){
 		// check to see if tag has been added to tag list
 		if(!tagList.includes(tag)) {
 			// if it isn't added, add it

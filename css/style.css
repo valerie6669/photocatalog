@@ -1,0 +1,45 @@
+*{
+	box-sizing: border-box;
+}
+
+html,body {
+	min-height: 100vh;
+	margin: 0;
+	background: lavender;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*body {
+	color: orange;
+	display: flex;
+}*/
+
+.Image {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+/*	border: 50px;*/
+	padding: 5px;
+}
+
+div > div {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+
+}
+
+.buttons {
+	border: none;
+	box-sizing: 50px;
+	margin: 5px;
+	font-size: 10px;
+	font-family: fantasy;
+}
+
+.active{
+	background: grey;
+	border: none;
+}
