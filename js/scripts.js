@@ -1,6 +1,6 @@
-function Image(image, title, tags) {
+function Image(image, name, tags) {
 	this.image = image;
-	this.title = title;
+	this.name = name;
 	this.tags = tags;
 	this.display = function() {
 
@@ -13,7 +13,7 @@ function Image(image, title, tags) {
 
 		var imageString = "";
 		imageString += "<img src=>" + this.image + "</img>";
-		//imageString += "<cite>" + this.title + "</cite>";
+		imageString += "<cite>" + this.name + "</cite>";
 
 		container.html(imageString)
 		$(".Image").prepend(container)
